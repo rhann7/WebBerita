@@ -32,19 +32,17 @@
 
             <?php
                 if (isset($data)) {
-
                     foreach ($data as $item) {
-
+                ?>
+                        <tr>
+                            <td><?php echo $item['id'] ?></td>
+                            <td><?php echo $item['name'] ?></td>
+                            <td><?php echo $item['email'] ?></td>
+                        </tr>
+                <?php
                     }
-
                 }
             ?>
-
-                <tr>
-                    <td><?php echo $item['id'] ?></td>
-                    <td><?php echo $item['name'] ?></td>
-                    <td><?php echo $item['email'] ?></td>
-                </tr>
         </table>
         <br>
 

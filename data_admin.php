@@ -1,3 +1,15 @@
+<?php
+    @include 'config.php';
+
+    if (isset($_GET['delete'])) {
+        $delete = $koneksi -> query ("DELETE FROM tb_user WHERE id = '$_GET[id]'");
+
+        if ($delete) {
+            header ("Location: data_admin.php");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,8 +36,9 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nama</th>
+                    <th>Name</th>
                     <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -37,6 +50,10 @@
                         <td><?php echo $item['id'] ?></td>
                         <td><?php echo $item['name'] ?></td>
                         <td><?php echo $item['email'] ?></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $item['id'] ?>" class="btn btn-warning">Edit</a>
+                            <a href="data_admin.php?delete=1&id=<?php echo $item['id'] ?>" class="btn btn-danger">Delete</a>
+                        </td>
                     </tr>
                 <?php
                     }

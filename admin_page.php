@@ -29,7 +29,7 @@
                 <a href="login_form.php" class="btn">login</a>
                 <a href="register_form.php" class="btn">register</a>
                 <a href="logout.php" class="btn">logout</a>
-                <a href="data.php" class="btn">Data</a>
+                <a href="data_admin.php" class="btn">Data</a>
             </div>
         </div>
     </body>

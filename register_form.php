@@ -70,7 +70,7 @@
                 <input type="email" name="email" required placeholder="Enter your email">
                 <input type="password" name="password" required placeholder="Enter your password">
                 <input type="password" name="conpassword" required placeholder="Confirm your password">
-                <select name="user_type">
+                <select name="user_type" style="cursor: pointer;">
                     <option value="user">user</option>
                     <option value="admin">admin</option>
                 </select>
